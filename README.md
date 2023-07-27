@@ -76,7 +76,7 @@ We welcome contributions from the community to improve the TechFix Experts Websi
 Please adhere to our coding standards and ensure all tests pass before submitting a pull request.
 
 ## License
-The TechFix Experts Website is open-source software released under the [UNISA](https://www.unisa.it).
+The TechFix Experts Website is open-source software released under the [MIT LICENSE](https://opensource.org/license/mit/).
 
 ## Contact
 For any questions or feedback, please email us at topaziofederica@gmail.com or open an issue on GitHub.
