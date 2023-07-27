@@ -1,0 +1,19 @@
+# TechFix Experts Website
+# Ignore development and build files
+build/
+dist/
+
+
+# Ignore temporary and backup files
+*.tmp
+*.bak
+
+# Ignore logs
+*.log
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore editor and IDE files
+*.sublime-project
+*.sublime-workspace
