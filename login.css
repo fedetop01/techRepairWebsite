@@ -1,0 +1,445 @@
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input, select {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 93%;
+  box-sizing: border-box; /* Add this line to include padding and border within the element's total width */
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+
+button:hover{
+	cursor:pointer;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 600px;
+}
+
+.form-container {
+	position: absolute;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+	overflow-y: scroll;
+}
+
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+
+
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+.container p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+.container span {
+	font-size: 12px;
+}
+
+.container a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.container button, .forgot_password button, #check_change button{
+	border-radius: 20px;
+	border: 1px solid #1F86DB;
+	background-color: #1F86DB;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+.container button:active {
+	transform: scale(0.95);
+}
+
+.container button:focus {
+	outline: none;
+}
+
+ .container button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #1F86DB;
+	background: -webkit-linear-gradient(to right, #4BA7F4, #1F86DB);
+	background: linear-gradient(to right, #4BA7F4, #1F86DB );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+  outline: 2px solid #fff;
+}
+
+.signUp-steps span{
+	margin: 20px 0;
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+	outline: 2px solid #fff;
+
+}
+
+.social-container:hover a{
+  outline-offset: 4px;
+}
+
+.facebook:hover{
+  animation: shake 0.25s;
+  background-color: #3b5998
+}
+
+.facebook:hover #facebook{
+  color: #FFFFFF
+}
+
+.instagram:hover{
+  animation: shake 0.25s;
+  background: linear-gradient(
+    270deg, #3f5efb, #fc466b
+  );
+}
+
+.instagram:hover #instagram{
+  color: #FFFFFF;
+}
+
+.twitter:hover{
+  animation: shake 0.25s;
+  background-color: #1D9BF0;
+}
+
+.twitter:hover #twitter{
+  color: #FFFFFF;
+
+}
+
+
+.forgot_password{
+	display: none;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+							0 10px 10px rgba(0,0,0,0.22);
+	width: 500px;
+	height: 230px;
+
+	text-align: center;
+}
+
+.forgot_password > p{
+	text-align: center;
+}
+
+.forgot_password > input{
+	text-align: center;
+	margin-top: 2px;
+}
+
+
+.button_central{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	margin-top: 20px;
+}
+
+.button_central button{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.ButtonNextPrevious{
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ButtonNextPrevious button{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#login {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	height: 115vh;
+	margin: -20px 0 50px;
+	box-sizing: border-box;
+
+	background-image: url(images/low-poly-grid-haikei.png);
+
+}
+
+#login h1 {
+	font-weight: bold;
+	margin: 0;
+	font-size: 30px;
+}
+
+#login h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+#forgot_label:hover{
+	border-radius: 20px;
+	border: 1px solid #1F86DB;
+	background-image: linear-gradient(-45deg, #1f86db 5%, #a9a9a9 95%);;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 10px 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+}
+#forgot_label{
+	padding: 10px 30px;
+}
+
+
+
+
+
+
+#Verify_email{
+	display: block;
+}
+
+
+#verify_email {
+	border-radius: 10px;
+}
+
+#verify_security_answer{
+	display: none;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+							0 10px 10px rgba(0,0,0,0.22);
+	width: 500px;
+	height: 315px;
+
+
+}
+
+#verify_security_answer > p{
+	text-align: center;
+}
+
+#verify_security_answer > input{
+	text-align: center;
+	margin-top: 2px;
+}
+
+#new_password_form{
+	display: none;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+							0 10px 10px rgba(0,0,0,0.22);
+	width: 500px;
+	height: 300px;
+	align-items: center;
+	justify-content: center;
+}
+
+#new_password_form > p{
+	text-align: center;
+}
+
+#new_password_form > input{
+	text-align: center;
+	margin-top: 2px;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+@keyframes shake{
+  10% {
+    transform: rotate(15deg);
+  }
+  20%{
+    transform: rotate(-15deg);
+  }
+  30%{
+    transform: rotate(15deg);
+  }
+  40%{
+    transform: rotate(-15deg);
+  }
+}
+
+#toggle-password {
+  cursor: pointer;
+}
+
+#toggle-password i {
+  font-size: 16px;
+}

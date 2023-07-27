@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital-wght@0,400;0,500;1,300&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+}
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  max-height: 40px;
+  position: fixed; /* Navbar fissa */
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+}
+.prod {
+ height: 2em;
+
+}
+.logo {
+
+  width: 30px;
+  height: 30px;
+}
+
+
+.site-name a, .site-name a:hover{
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+
+}
+.text-primary {
+color: #007bff !important;
+font-size: 30px;
+}
+
+/* Stile generale della lista di navigazione */
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+
+}
+
+/* Posizione relativa per consentire il posizionamento assoluto degli elementi figlio */
+header nav li {
+  position: relative;
+}
+
+/* Stile del link nella lista di navigazione */
+header nav a, header nav span {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+
+/* Stile del link al passaggio del mouse */
+header nav a:hover,  header nav a.active{
+  background-color: #fff;
+  color: #333;
+  border-radius: 10%;
+}
+
+/* Stile del menu a tendina (sottomenu) */
+header nav ul ul {
+  position: absolute;
+}
+
+/* Stile degli elementi della lista del menu a tendina */
+header nav ul ul li {
+  display: flex;
+  align-items: center;
+}
+
+/* Visualizzazione del sottomenu al passaggio del mouse sul menu principale */
+header nav li:hover > ul {
+  display: flex;
+  flex-direction: column;
+}
+.end-elements{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  grid-gap: 40px;
+  margin-right: 120px;
+  text-align: center;
+}
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  font-family: inherit;
+  border-radius: 10%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10%;
+}
+
+.dropdown-menu span, .dropdown-menu a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+/* Change color of dropdown items on hover */
+.dropdown-menu span:hover, .dropdown-menu span:hover a,  .dropdown-menu a:hover{
+  background-color: #333;
+  color: #fff;
+  border-radius: 10%;
+}
+/* Show the dropdown menu on hover */
+.dropdown-products:hover .dropdown-menu, .dropdown-profile:hover .dropdown-menu {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-products:hover .dropbtn, .dropdown-profile:hover .dropbtn, .active, .prod:hover{
+  color: #333;
+  background-color: #fff;
+
+}
+
+
+
+@media (max-width: 1100px) {
+  .site-name, .welcome{
+    display: none;
+  }
+
+}
